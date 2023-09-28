@@ -1,15 +1,15 @@
  
-import { Profile } from './Profie'
+import { Profile } from './Profile/Profile'
 import user from '../data/user.json'
 
 
-import { Statistics } from './Statistic'
+import { Statistics } from './Statistics/Statistic'
 import data from '../data/data.json';
 
 
-import { FriendList } from './FriendList'
+import { FriendList } from './FriendList/FriendList'
 import friends from '../data/friends.json';
-import { FriendListItem } from './FriendListItem'
+import { FriendListItem } from './FriendList/FriendListItem'
 
 import { TransactionHistory} from './TransactionHistory'
 import transactions from '../data/transactions.json';
@@ -25,7 +25,7 @@ export function App() {
   avatar={user.avatar}
   stats={user.stats}
 />
-        <Statistics title="Upload stats" stats={data} />
+        <Statistics title="Upload stats" stats={data}  />
         
        <FriendList friends={friends}>
             {friends.map((friend) => {

@@ -1,9 +1,12 @@
 import PropTypes from "prop-types";
-
+import {UlFriendList} from "../FriendList/FriendList.styled"
 export const FriendList = ({ friends, children }) => {
     
-    return <ul className="friend-list">{children}</ul>
+    return <UlFriendList>{children}</UlFriendList>
 };
+
+
+
 
 
 FriendList.propTypes = {
