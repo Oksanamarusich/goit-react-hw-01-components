@@ -17,21 +17,19 @@ border-radius: 8px;
 `
 
 export const Status = styled.span`
+display:block;
 margin-right:60px;
 position: absolute;
 top: 50px;
 right: 400px;
 
-
-width: ${({ size = 20 }) => `${size}px`};
-height: ${({ size = 20 }) => `${size}px`};
+width: 20px;
+height: 20px;
 
 border-radius: 50%;
-background-color:${({ isOnline }) => {
-    return isOnline ? 'green' : 'red';
-}
-    
-};
+background-color: ${props => {
+    return props.isOnline ? 'green' : 'red';
+  }}
 `
 export const Avatar = styled.img`
 margin-right:60px;
@@ -39,10 +37,12 @@ margin-left: 60px;
 
 width:80px;
 height: 80px;
+
 border-radius: 5px;
 border: 2px solid rgb(216, 225, 225);
+&:hover{
 box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-
+}
 `
 export const Name = styled.p`
 justify-content: center;

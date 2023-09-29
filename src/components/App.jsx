@@ -9,9 +9,10 @@ import data from '../data/data.json';
 
 import { FriendList } from './FriendList/FriendList'
 import friends from '../data/friends.json';
-import { FriendListItem } from './FriendList/FriendListItem'
+import { FriendListItem } from './FriendList/FriendListItem';
 
-import { TransactionHistory} from './TransactionHistory'
+
+import { TransactionHistory } from './Transaction/TransactionHistory';
 import transactions from '../data/transactions.json';
 
 
@@ -26,14 +27,7 @@ export function App() {
   stats={user.stats}
 />
         <Statistics title="Upload stats" stats={data}  />
-        
-       <FriendList friends={friends}>
-            {friends.map((friend) => {
-            return  <FriendListItem key = {friend.id} avatar = {friend.avatar} name={friend.name} isOnline = {friend.isOnline} />
-        })}
-        </FriendList> 
-        
-        
+        <FriendList friends={friends} />
         <TransactionHistory items={transactions} />
     </div>);
 }
