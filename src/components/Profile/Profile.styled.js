@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
 export const ProfileContainer = styled.div`
-background-color: white;
+margin: 0 auto;
+
 width: 480px;
-margin-right: auto;
-margin-left: auto;
+
+background-color: white;
 border-radius:8px;
+&:hover{
 box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 
 `
 
@@ -19,7 +22,9 @@ border-radius: 50%;
 margin-left: 150px;
 margin-bottom: 40px;
 border: 2px solid rgb(216, 225, 225);
+&:hover{
 box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 `
 
 export const Username = styled.p`

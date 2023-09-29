@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const UlFriendList = styled.ul`
-margin-left: 390px;
+margin: 0 auto;
 width: 480px;
+
 
 `

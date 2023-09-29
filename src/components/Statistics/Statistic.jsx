@@ -4,24 +4,19 @@ import {StatisticContainer, TitleStatistic, StatList, StatItem} from "./Statisti
 
 export const Statistics = ({ title, stats }) => {
   return <StatisticContainer>
-    
-      {title && <TitleStatistic>{title}</TitleStatistic>}
-      
-      {stats.map(({ label, percentage, id,index }) => {
-         
-        return <StatList key={id} index = {index}>
-          <StatItem>
-            <span className="label">{label}</span>
+   {title && <TitleStatistic>{title}</TitleStatistic>}
+    <StatList>
+      {stats.map(({ label, percentage, id, index }) => (
+        <StatItem key={id} index = {index}>
+          <span className="label">{label}</span>
             <span className="percentage">{percentage}%</span>
-          </StatItem>
-    
-        </StatList>
+        </StatItem>
+      )
         
-        
-      })}
-      
-  
+      )}
+    </StatList>
   </StatisticContainer>
+  
 };
 
 Statistics.propTypes = {
